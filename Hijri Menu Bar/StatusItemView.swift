@@ -19,6 +19,10 @@ struct StatusItemView: View {
           .font(.system(size: 10))
           .foregroundColor(Color.gray)
           .padding(.bottom, 10)
+        Button("Quit") {
+            NSApp.terminate(self)
+        }
+        .padding(.bottom, 5)
       }
       // Call fetchHijriDates when the popover appears
       .onAppear(perform: fetchHijriDates)
