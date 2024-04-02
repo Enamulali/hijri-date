@@ -7,28 +7,39 @@ extension Notification.Name {
 struct StatusItemView: View {
     @State private var hijriDateArabic: String = ""
     @State private var hijriDateEnglish: String = ""
+    @State private var isShowingInstructions = false
 
     var body: some View {
-      VStack {
-        // Display the Hijri date with appropriate formatting
-        Text("Hijri Date: \(hijriDateArabic)")
-          .padding()
-        Text("\(hijriDateEnglish)")
-          .padding(.bottom, 10)
-        Text("Copyright © 2024 Enamul Ali")
-          .font(.system(size: 10))
-          .foregroundColor(Color.gray)
-          .padding(.bottom, 10)
-        Button("Quit") {
-            NSApp.terminate(self)
+        VStack {
+            // Display the Hijri date with appropriate formatting
+            Text("Hijri Date: \(hijriDateArabic)")
+                .padding()
+            Text("\(hijriDateEnglish)")
+                .padding(.bottom, 15)
+            HStack {
+                Text("Copyright © 2024 Enamul Ali")
+                    .font(.system(size: 10))
+                    .foregroundColor(Color.gray)
+                    .padding(.bottom, 10)
+                Image(systemName: "info.circle")
+                    .foregroundColor(.primary)
+                    .onTapGesture {
+                        isShowingInstructions.toggle()
+                    }
+                    .padding(.bottom, 5)
+                .padding(.bottom, 5)
+                .sheet(isPresented: $isShowingInstructions) {
+                    InstructionsView(dismiss: {
+                        isShowingInstructions = false
+                    })
+                }
+            }
+           
         }
-        .padding(.bottom, 5)
-      }
-      // Call fetchHijriDates when the popover appears
-      .onAppear(perform: fetchHijriDates)
-      .onReceive(NotificationCenter.default.publisher(for: .fetchHijriDates)) { _ in
-          fetchHijriDates()
-      }
+        .onAppear(perform: fetchHijriDates)
+        .onReceive(NotificationCenter.default.publisher(for: .fetchHijriDates)) { _ in
+            fetchHijriDates()
+        }
     }
 
     private func fetchHijriDates() {
