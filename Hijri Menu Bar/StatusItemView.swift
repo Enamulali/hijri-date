@@ -1,23 +1,30 @@
 import SwiftUI
 
+extension Notification.Name {
+    static let fetchHijriDates = Notification.Name("fetchHijriDates")
+}
+
 struct StatusItemView: View {
     @State private var hijriDateArabic: String = ""
     @State private var hijriDateEnglish: String = ""
 
     var body: some View {
-        VStack {
-            Text("Hijri Date: \(hijriDateArabic)")
-                .padding()
-            Text("\(hijriDateEnglish)")
-                .padding(.bottom, 10)
-                .onAppear {
-                    fetchHijriDates()
-                }
-            Text("Copyright © 2024 Enamul Ali")
-                .font(.system(size: 10))
-                .foregroundColor(Color.gray)
-                .padding(.bottom, 10)
-        }
+      VStack {
+        // Display the Hijri date with appropriate formatting
+        Text("Hijri Date: \(hijriDateArabic)")
+          .padding()
+        Text("\(hijriDateEnglish)")
+          .padding(.bottom, 10)
+        Text("Copyright © 2024 Enamul Ali")
+          .font(.system(size: 10))
+          .foregroundColor(Color.gray)
+          .padding(.bottom, 10)
+      }
+      // Call fetchHijriDates when the popover appears
+      .onAppear(perform: fetchHijriDates)
+      .onReceive(NotificationCenter.default.publisher(for: .fetchHijriDates)) { _ in
+          fetchHijriDates()
+      }
     }
 
     private func fetchHijriDates() {

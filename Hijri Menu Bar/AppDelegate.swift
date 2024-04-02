@@ -39,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if popover.isShown {
                     popover.performClose(sender)
                 } else {
+                    NotificationCenter.default.post(name: .fetchHijriDates, object: nil)
                     popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
                 }
             }
