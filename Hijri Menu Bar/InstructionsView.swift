@@ -28,7 +28,7 @@ struct InstructionsView: View {
             Text("3. Go to the Login Items tab.")
             Text("4. Click the '+' button and add your app from the Applications folder.")
             Text("5. The App should launch at login, even when quit.")
-            Text("Pressing 'Quit App' below will remove it from the menu bar.\nRelaunch from the Applications folder if needed.")
+            Text("To terminate the app, removing it from the menu bar, please use Activity Monitor\nand search 'Hijri Menu Bar'. Double tap and press 'quit'.")
                 .padding(.top, 10)
             HStack(){
                 Button("Visit GitHub Repository") {
@@ -36,13 +36,6 @@ struct InstructionsView: View {
                         NSWorkspace.shared.open(url)
                     }
                 }
-                .padding(.top, 10)
-                Button("Quit App") {
-                    NSApp.terminate(self)
-                }
-                .foregroundColor(.white)
-                .background(Color.red)
-                .font(.headline)
                 .padding(.top, 10)
             }
 
