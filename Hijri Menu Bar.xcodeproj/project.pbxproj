@@ -15,6 +15,7 @@
 		05BEF2472BB7C3C00045D839 /* Hijri_Menu_BarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEF2462BB7C3C00045D839 /* Hijri_Menu_BarTests.swift */; };
 		05BEF2512BB7C3C00045D839 /* Hijri_Menu_BarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEF2502BB7C3C00045D839 /* Hijri_Menu_BarUITests.swift */; };
 		05BEF2532BB7C3C00045D839 /* Hijri_Menu_BarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEF2522BB7C3C00045D839 /* Hijri_Menu_BarUITestsLaunchTests.swift */; };
+		05FC92D02BBC93EB002BDDC0 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC92CF2BBC93EB002BDDC0 /* InstructionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		05BEF24C2BB7C3C00045D839 /* Hijri Menu BarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hijri Menu BarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BEF2502BB7C3C00045D839 /* Hijri_Menu_BarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hijri_Menu_BarUITests.swift; sourceTree = "<group>"; };
 		05BEF2522BB7C3C00045D839 /* Hijri_Menu_BarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hijri_Menu_BarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05FC92CF2BBC93EB002BDDC0 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				05BEF2382BB7C3C00045D839 /* Assets.xcassets */,
 				05BEF23D2BB7C3C00045D839 /* Hijri_Menu_Bar.entitlements */,
 				05BEF23A2BB7C3C00045D839 /* Preview Content */,
+				05FC92CF2BBC93EB002BDDC0 /* InstructionsView.swift */,
 			);
 			path = "Hijri Menu Bar";
 			sourceTree = "<group>";
@@ -220,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 05BEF2282BB7C3BE0045D839;
+			packageReferences = (
+				05FC92D12BBCCB26002BDDC0 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 05BEF2322BB7C3BE0045D839 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				054231AD2BB7C59A00A4B785 /* AppDelegate.swift in Sources */,
+				05FC92D02BBC93EB002BDDC0 /* InstructionsView.swift in Sources */,
 				05BEF2372BB7C3BE0045D839 /* StatusItemView.swift in Sources */,
 				05BEF2352BB7C3BE0045D839 /* Hijri_Menu_BarApp.swift in Sources */,
 			);
@@ -425,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Hijri Menu Bar/Hijri_Menu_Bar.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -440,7 +448,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "enamulali.Hijri-Menu-Bar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -453,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Hijri Menu Bar/Hijri_Menu_Bar.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -468,7 +477,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "enamulali.Hijri-Menu-Bar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -588,6 +597,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05FC92D12BBCCB26002BDDC0 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 05BEF2292BB7C3BE0045D839 /* Project object */;
 }
