@@ -64,10 +64,18 @@ To automatically launch the app at login, please follow these steps:
 
 ### Quitting the App
 
-1. Click on the &#8505; icon in the app to bring up the menu.
-2. Click the red 'Quit App' button.
+1. **Open Activity Monitor:** Launch Activity Monitor by searching for it in Spotlight or navigating to `/Applications/Utilities/Activity Monitor.app`.
+  
+2. **Locate the App:** In the Activity Monitor window, find the name of the app you want to quit from the list of running processes. You can use the search bar at the top-right corner to quickly locate the app.
 
-Pressing 'Quit App' will remove the app from the menu bar.\nRelaunch from the Applications folder if needed.
+3. **Select the App:** Click on the app to select it in the list.
+
+4. **Quit the App:** With the app selected, click the "X" button in the Activity Monitor toolbar, or select "Quit Process" from the "View" or "Process" menu.
+
+5. **Confirm Quit:** If prompted, confirm that you want to quit the app.
+
+### Note:
+- Quitting the app using Activity Monitor forcibly terminates the app's process and will remove the app from the menu bar.\nRelaunch from the Applications folder if needed.
 
 ## Support
 For any issues or suggestions, please [open an issue](https://github.com/Enamulali/hijri-date/issues).
