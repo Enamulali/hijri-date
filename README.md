@@ -2,11 +2,13 @@
 
 Welcome to the Hijri Menu Bar app! This simple macOS app allows you to view the current Hijri date conveniently from the menu bar.
 
-**Ensure you read the documentation properly to set up the app correctly. The most important steps are:**
+**Ensure you read the documentation properly to set up the app correctly.**
+
+Quick Links:
 
 - [Installation](#installation): Download and install the app.
 - [Disabling Gatekeeper](#disabling-gatekeeper): Temporarily disable Gatekeeper to bypass security checks.
-- [Enabling Launch at Login](#Launch-App-upon-Login): Set up the app to launch automatically at login.
+- [Enabling Launch at Login](#launch-app-upon-login): Set up the app to launch automatically at login.
 - [How to use](#usage)
 
 ![Cover Image](./Hijri%20Date%20Cover.jpeg)
@@ -78,4 +80,6 @@ To automatically launch the app at login, please follow these steps:
 - Quitting the app using Activity Monitor forcibly terminates the app's process and will remove the app from the menu bar.\nRelaunch from the Applications folder if needed.
 
 ## Support
+Read more about the development [process here](https://medium.com/@enamul97/building-a-macos-menu-bar-application-e367fa3aa816).
+
 For any issues or suggestions, please [open an issue](https://github.com/Enamulali/hijri-date/issues).
